@@ -1,0 +1,18 @@
+apply plugin: 'java'
+configurations {
+    provided
+    compile.extendsFrom provided
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        name 'Spigot'
+        url 'https://hub.spigotmc.org/nexus/content/groups/public/'
+    }
+}
+
+dependencies {
+    provided 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+}
